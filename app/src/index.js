@@ -5,13 +5,12 @@ import {applyMiddleware, createStore } from 'redux'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 
+import reducer from '../src/store/reducers'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const reducer = () => {
-  return {}
-}
+
 
 const store = createStore(reducer, applyMiddleware(thunk, logger))
 
