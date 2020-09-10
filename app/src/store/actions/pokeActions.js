@@ -22,7 +22,7 @@ export const getData = () => {
             })
         .catch(err => {
             console.error(err)
-            dispatch({ type: GET_DATA_NO, payload: 'Uh Oh seems like all the pokemon are running away...'})
+            dispatch({ type: GET_DATA_NO, payload: 'Uh Oh seems like all the pokemon ran away...'})
         })
     }
 }

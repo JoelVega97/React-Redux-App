@@ -3,7 +3,7 @@ import {GET_DATA, GET_DATA_YES, GET_DATA_NO} from '../actions'
 const initalstate = {
     info: [{
         name: '',
-        front_default: '',
+        sprites: {front_default: ''},
         types: ''
     }],
     loadingData: false,
@@ -20,12 +20,15 @@ export default (state = initalstate, action) => {
             // console.log(state)
             return {
                 ...state,
-                ...state.info,
-                info: [{
-                    name: action.payload1,
-                    front_default: action.payload2,
-                    types: action.payload3
-                }]
+                state: 
+                {
+                    info: [{
+                        name: action.payload1,
+                        sprites: {front_default: action.payload2},
+                        types: action.payload3
+                    }]
+                },
+                loadingData: false
             }
         case GET_DATA_NO:
             return {
