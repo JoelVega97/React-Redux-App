@@ -8,8 +8,8 @@ function PokeCard({ info }){
             <h4>{info.name}</h4>
             <div className = 'types'>
                Type:
-               {info.types.map(t => {
-                   return <li>{t.type.name}</li>
+               {info.types.for(t => {
+                   return <li key = {t.type.slot} >{t.type.name}</li>
                })}
             </div>
           </div>

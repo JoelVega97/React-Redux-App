@@ -6,8 +6,8 @@ function Loader(props) {
     return (
         <>
           <h3>Choose your Pokemon</h3>
-          {props.data.map(info => {
-              return <PokeCard info = {info} />
+          {props.info.forEach(data => {
+              return <PokeCard key = {data.id} info = {data} />
           })}
         </>
     )
@@ -15,7 +15,7 @@ function Loader(props) {
 
 function mapStateToProps(state){
     return {
-        data: state.data
+        info: state.info
     }
 }
 
